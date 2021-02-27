@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: ""
+    relative_path: /home/duynam/zb320_ws/src/zb320/model.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/zb320.srdf
+  CONFIG:
+    author_name: DuyNam
+    author_email: duynamk63uet@gmail.com
+    generated_timestamp: 1614432024

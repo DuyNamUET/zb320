@@ -1,0 +1,10 @@
+controller_list:
+  - name: fake_zb320_arm_controller
+    joints:
+      - Rev5
+      - Rev6
+      - Rev7
+      - Rev8
+initial:  # Define initial robot poses.
+  - group: zb320_arm
+    pose: home
