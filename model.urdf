@@ -1,0 +1,104 @@
+<robot name="zb320">
+  <link name="base_link">
+    <visual>
+      <origin rpy="0 0 3.14" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://zb320_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://zb320_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="link_1_1">
+    <visual>
+      <origin rpy="0 0 3.14" xyz="-0.0 -0.0 -0.02"/>
+      <geometry>
+        <mesh filename="package://zb320_description/meshes/link_1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.02"/>
+      <geometry>
+        <mesh filename="package://zb320_description/meshes/link_1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="link_2_1">
+    <visual>
+      <origin rpy="0 0 3.14" xyz="-0.0 -0.0 -0.09"/>
+      <geometry>
+        <mesh filename="package://zb320_description/meshes/link_2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.09"/>
+      <geometry>
+        <mesh filename="package://zb320_description/meshes/link_2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="link_3_1">
+    <visual>
+      <origin rpy="0 0 3.14" xyz="0.0 0.0 -0.24"/>
+      <geometry>
+        <mesh filename="package://zb320_description/meshes/link_3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.24"/>
+      <geometry>
+        <mesh filename="package://zb320_description/meshes/link_3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="link_4_1">
+    <visual>
+      <origin rpy="0 0 3.14" xyz="-0.0 -0.17 -0.24"/>
+      <geometry>
+        <mesh filename="package://zb320_description/meshes/link_4_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.0 -0.17 -0.24"/>
+      <geometry>
+        <mesh filename="package://zb320_description/meshes/link_4_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="Rev5" type="continuous">
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.02"/>
+    <parent link="base_link"/>
+    <child link="link_1_1"/>
+    <axis xyz="0.0 0.0 1.0"/>
+  </joint>
+
+  <joint name="Rev6" type="continuous">
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.07"/>
+    <parent link="link_1_1"/>
+    <child link="link_2_1"/>
+    <axis xyz="1.0 0.0 0.0"/>
+  </joint>
+
+  <joint name="Rev7" type="continuous">
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.15"/>
+    <parent link="link_2_1"/>
+    <child link="link_3_1"/>
+    <axis xyz="1.0 0.0 0.0"/>
+  </joint>
+
+  <joint name="Rev8" type="continuous">
+    <origin rpy="0 0 0" xyz="0.0 0.17 0.0"/>
+    <parent link="link_3_1"/>
+    <child link="link_4_1"/>
+    <axis xyz="1.0 0.0 0.0"/>
+  </joint>
+</robot>

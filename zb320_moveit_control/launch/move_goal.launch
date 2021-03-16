@@ -1,0 +1,3 @@
+<launch>
+    <node name="move_goal" pkg="zb320_moveit_control" type="move_goal" respawn="false" output="screen" />
+</launch>

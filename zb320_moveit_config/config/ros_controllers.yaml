@@ -20,12 +20,32 @@ joint_state_controller:
   type: joint_state_controller/JointStateController
   publish_rate: 50
 controller_list:
-  - name: position_controller
-    action_ns: follow_joint_trajectory
-    default: True
-    type: FollowJointTrajectory
-    joints:
-      - Rev5
-      - Rev6
-      - Rev7
-      - Rev8
+  []
+position_arm_controller:
+  type: position_controllers/JointPositionController
+  joints:
+    - Rev5
+    - Rev6
+    - Rev7
+    - Rev8
+  gains:
+    Rev5:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Rev6:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Rev7:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Rev8:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1

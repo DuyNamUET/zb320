@@ -6,6 +6,6 @@ moveit_setup_assistant_config:
   SRDF:
     relative_path: config/zb320.srdf
   CONFIG:
-    author_name: DuyNam
+    author_name: Duy Nam
     author_email: duynamk63uet@gmail.com
-    generated_timestamp: 1614432024
+    generated_timestamp: 1615824231
