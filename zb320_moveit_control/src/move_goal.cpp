@@ -68,9 +68,11 @@ int main(int argc, char** argv)
     visual_tools.prompt("Press 'next' in the RvizVisualToolsGui window to continue the demo");
 
     // MOVING TO GOAL
-    // move_group.move();
+    move_group.move();
 
     // END
+    visual_tools.trigger();
+    visual_tools.prompt("Press 'next' in the RvizVisualToolsGui window to finish the demo");
     ros::shutdown();
     return 0;
 }
